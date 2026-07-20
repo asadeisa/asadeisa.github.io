@@ -1,0 +1,153 @@
+*{
+  /* font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; */
+ font-family: 'Work Sans', sans-serif;
+}
+.font-w-300{
+  font-weight: 300 !important;
+}
+.font-w-200{
+  font-weight: 200 !important;
+
+}
+.work-card img{
+  transition: all 0.3s ease-in-out;
+}
+.work-card:hover{
+  img{
+    transform: scale(1.07);
+  }
+}
+.connect-footer-icon svg{
+  width: calc(10px + .77vw);
+  height: calc(10px + .77vw);
+  transition: all 0.3s ease-in-out;
+}
+
+.connect-footer-icon:hover svg{
+  transform: scale(1.1);
+}
+.star-svg svg{
+  width: calc(13px + .7vw);
+  height: calc(13px + .7vw);
+
+}
+/* animation of the home section */
+.child-home  {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+.home-section-is-in  {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+.home-section-is-out {
+  opacity: 0;
+  transform: translateY(40px);
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+/* about me animation  */
+.left-section , .right-section{
+  transition: all ease-in .8s;
+  opacity: 0;
+}
+.left-section {
+ transform: translateX(-40px);
+}
+ .right-section{
+  transform: translateX(40px);
+  opacity: 0;
+}
+ .element-in .left-section , .element-in .right-section {
+  transform: translateX(0);
+  opacity: 1;
+}
+.fade-in{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all ease-in .8s;
+}
+.element-in .fade-in , .element-in.fade-in{
+  transition-duration: calc(0.4s * var(--i));
+  opacity: 1;
+  transform: translateY(0);
+}
+/* terminal prompt style */
+.term-prompt {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* terminal accent chip — reusable across skills / about / contact.
+   Stays light-page-friendly: accent outline + faint tint, glows in both themes. */
+.term-token {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.76rem;
+  line-height: 1.4;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--term-prompt) 38%, transparent);
+  border-radius: 5px;
+  color: var(--term-prompt);
+  background: color-mix(in srgb, var(--term-prompt) 9%, transparent);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.term-token:hover {
+  border-color: var(--term-prompt);
+  background: color-mix(in srgb, var(--term-prompt) 16%, transparent);
+}
+
+/* green variant for "status"/AI-flavored tokens */
+.term-token--accent {
+  border-color: color-mix(in srgb, var(--term-accent) 38%, transparent);
+  color: var(--term-accent);
+  background: color-mix(in srgb, var(--term-accent) 10%, transparent);
+}
+
+.term-token--accent:hover {
+  border-color: var(--term-accent);
+  background: color-mix(in srgb, var(--term-accent) 18%, transparent);
+}
+
+@keyframes term-caret {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.term-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--term-prompt);
+  vertical-align: text-bottom;
+  margin-left: 0.15em;
+  animation: term-caret 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .child-home,
+  .fade-in,
+  .left-section,
+  .right-section {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+  .term-caret {
+    animation: none;
+  }
+}
+
+/* keyboard focus visibility (a11y) */
+:focus-visible {
+  outline: 2px solid var(--term-prompt);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+
+  --main: rgb(252, 252, 253);
+  --primary: #2d3748;
+  --secondary: rgba(255, 255, 255, 0.8);
+  --card: rgba(255, 255, 255, 0.4);
+  --accent: #3182ce;
+  --border: rgba(45, 55, 72, 0.1);
+  --shadow: rgba(0, 0, 0, 0.08);
+  --hero-border: #d0e2f4;
+  --gradient-accent: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gray : rgba(17, 24, 39, 0.05) ;
+  --text : #000 ;
+  /* terminal tokens — light values */
+  --term-accent: #16a34a;
+  --term-prompt: #0891b2;
+  --term-bg: #f4f7fb;
+
+  /* console tokens — constant DARK surface in BOTH themes, so the green/cyan
+     accents glow on light mode the same way they do in dark mode. Used by the
+     terminal-output surfaces (work run-log, experience, boot, palette, hint). */
+  --console-bg: #0a0f1a;
+  --console-elev: #111a2b;
+  --console-text: #e6edf6;
+  --console-dim: #93a4bd;
+  --console-accent: #4ade80;
+  --console-prompt: #22d3ee;
+  --console-amber: #fcd34d;
+  --console-border: rgba(255, 255, 255, 0.12);
+  --console-shadow: 0 8px 30px rgba(2, 6, 23, 0.22);
+}
+
+:root.dark {
+  --main: #0f172a;
+  --primary: #f7fafc;
+  --secondary: rgba(45, 55, 72, 0.35);
+  /* --card: rgba(45, 55, 72, 0.25); */
+  --card: rgba(255, 255, 255 , 0.04);
+  --accent: #63b3ed;
+  --border: rgba(255, 255, 255, 0.2);
+  --shadow: rgba(253, 252, 252, 0.03);
+  --hero-border: rgba(99, 179, 237, 0.3);
+  --gradient-accent: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  background-image: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  --gray: rgba(255, 255, 255, 0.05);
+  --text : #fff ;
+  /* terminal tokens — dark values */
+  --term-accent: #4ade80;
+  --term-prompt: #22d3ee;
+  --term-bg: #0a0f1a;
+
+}
+
+@theme {
+  --color-main: var(--main);
+  --color-dark : #1e293b ;
+  --color-primary: #2d3748;
+  --color-secondary: rgba(255, 255, 255, 0.8);
+  --color-card: rgba(255, 255, 255, 0.4);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --color-hero-border: var(--hero-border);
+  --color-gradient-accent: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color-main-dark: #2d3748;
+  --color-primary-dark: #f7fafc;
+  --color-secondary-dark: rgba(45, 55, 72, 0.35);
+  --color-card-dark: rgba(255, 255, 255 , 0.04);
+  --color-accent-dark: #63b3ed;
+  --color-border-dark: rgba(255, 255, 255, 0.2);
+  --color-shadow-dark: rgba(253, 252, 252, 0.03);
+  --color-hero-border-dark: rgba(99, 179, 237, 0.3);
+  --color-gradient-accent-dark: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  --color-gray : var(--gray);
+  --breakpoint-xs: 30rem;
+  /* terminal color utilities */
+  --color-term-accent: var(--term-accent);
+  --color-term-prompt: var(--term-prompt);
+  --color-term-bg: var(--term-bg);
+}
+
+body{
+  background-color: var(--main);
+ color: var(--text);
+ /* color : rgb(252, 252, 253); */
+}
+@import "./style.css";
+@custom-variant dark (&:where(.dark, .dark *));
