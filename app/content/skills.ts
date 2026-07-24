@@ -6,11 +6,11 @@ import type { SkillGroup } from '~/types/global'
 export const skillGroups: SkillGroup[] = [
   {
     name: 'Frameworks',
-    items: ['Vue.js 3/2', 'Nuxt 3', 'React', 'Composition API', 'Pinia', 'Vuex', 'Vue Router', 'Redux (familiar)'],
+    items: ['Vue.js 3/2', 'Nuxt 3/4', 'React', 'Laravel','Composition API', 'Pinia', 'Vuex', 'Vue Router', 'Redux (familiar)'],
   },
   {
     name: 'Languages',
-    items: ['TypeScript', 'JavaScript ES6+', 'HTML5', 'CSS3'],
+    items: ['TypeScript', 'JavaScript ES6+', 'PHP', 'HTML5', 'CSS3'],
   },
   {
     name: 'UI & Styling',

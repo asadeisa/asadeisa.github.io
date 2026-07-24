@@ -6,12 +6,13 @@ import type { ExperienceRole } from '~/types/global'
 
 export const experience: ExperienceRole[] = [
   {
-    role: 'Front-End Developer',
+    role: 'Full-Stack Developer',
     org: 'CityArt (Remote)',
-    period: 'Jan 2026 – Present',
+    period: 'Jan 2026 – Jul 2026',
     highlights: [
-      'Page-speed optimization across an existing Laravel/Blade site (cityart.my).',
-      'Performance contribution only — did not build the site.',
+      'Delivered production improvements across publishing (Wefaq Magazine) and e-commerce (Balsa Files) platforms using Vue 3, React, Laravel, and TypeScript.',
+      'Built and refined complex admin dashboards and implemented bilingual (Arabic/English) UIs with secure API integrations.',
+      'Leveraged AI tools (Claude Code, OpenAI Codex) daily for rapid frontend task planning, debugging, and structured agentic workflows.'
     ],
   },
   {

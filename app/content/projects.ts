@@ -28,7 +28,7 @@ export const featuredProjects: Work[] = [
     title: 'Wefaq Magazine',
     description:
       'Research publishing platform: submission workflows, reviewer arbitration, content archive, admin, bilingual AR/EN.',
-    tools: ['React', 'Supabase'],
+    tools: ['React', 'Supabase' , 'Tailwind CSS'],
     url: 'https://wefaqmagazine.com',
     summary: 'Research publishing platform: submission & review workflows, AR/EN.',
     kind: 'frontend',
@@ -38,7 +38,7 @@ export const featuredProjects: Work[] = [
     title: 'Balsa Files',
     description:
       'E-commerce flows: cart, wishlist, checkout, payment status, and responsive end-to-end user journeys.',
-    tools: ['Vue', 'Nuxt'],
+    tools: ['Laravel ', 'Bootstrap'],
     url: 'https://balsa.tayasmart.com',
     summary: 'E-commerce flows: cart, wishlist, checkout, payment status.',
     kind: 'frontend',
@@ -57,14 +57,16 @@ export const featuredProjects: Work[] = [
     id: 5,
     title: 'AKRS',
     description:
-      'Adaptive Knowledge Routing System — an experimental workflow concept for routing AI agents through the minimum required knowledge (Leader plans / Worker executes). A new direction for structuring AI work, currently a markdown specification.',
-    tools: ['Markdown spec', 'Workflow architecture'],
+      'Adaptive Knowledge Routing System — A context-engineering framework for AI agent workflows. It routes the exact required knowledge to agents at the correct moment (Leader plans / Worker executes), enabling even inexpensive models to execute complex tasks reliably using zero-dependency context files.',
+    tools: ['Context-engineering', 'AI Framework' ,'Prompt Architecture '],
     gitUrl: 'https://github.com/asadeisa/akrs',
-    summary: 'Experimental knowledge-routing workflow for AI agents.',
-    kind: 'experimental',
-    label: 'Experimental · V0 · ongoing',
+    summary: 'Adaptive Knowledge Routing System',
+    kind: 'ai-product',
+    label: 'Open-source ·Active',
   },
 ]
+
+
 
 // Secondary "more work". Park & Fetch surfaces a strong, verifiable metric.
 export const secondaryProjects: Work[] = [

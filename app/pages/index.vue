@@ -126,13 +126,9 @@ const isSmallScreen = ref(false)
             <UiPrompt as="h2" text="who_am_i" class="text-3xl md:text-4xl lg:text-5xl font-w-300 mb-3 lg:mb-4 xl:mb-6" typed />
 
             <p class="text-sm lg:text-[17px] text-gray-700 dark:text-gray-200">
-              I’m Asad Eisa, a frontend developer with 5+ years of experience in Nuxt.js, Vue.js, and modern web
-              technologies. I focus on building fast, responsive, and user-friendly applications using Vue 3 Composition
-              API, Nuxt 3, Tailwind CSS, and performance techniques like lazy loading, code splitting, and SSR.
+              I’m Asad Eisa, a frontend developer with 5+ years of experience building web applications, including 3+ years of professional experience delivering production-ready solutions. I specialize in building fast, responsive, and user-friendly platforms using Vue 3, Nuxt 3, TypeScript, and Tailwind CSS. By leveraging performance techniques like SSR, lazy loading, and code splitting, I ensure applications are optimized for speed and SEO.
               <br /><br />
-              I also bring React experience, which strengthens my ability to adapt across ecosystems.
-              Passionate about turning complex ideas into clean, scalable code, I strive to create digital experiences
-              that are both powerful and intuitive.
+              I also bring solid experience with React, which strengthens my ability to adapt across ecosystems. Passionate about turning complex ideas into clean, scalable code, I strive to create digital experiences that are both powerful and intuitive.
             </p>
             <div class="flex flex-wrap  mt-5 gap-3 xl:gap-4">
               <span class="term-token gap-1.5">
@@ -150,16 +146,7 @@ const isSmallScreen = ref(false)
 
             </div>
             <div>
-              <!-- <LazyUiButtonsPrimary button-type="link" hydrate-on-idle
-                class="mt-6 flex w-fit rounded-4xl items-center gap-2 text-sm lg:text-base"
-                href="/assets/files/asad-eisa.pdf" download="asad-eisa.pdf"
-                aria-label="Download the asad eisa cv as a PDF">
-                <SVG name="download"></SVG>
-                <span>
-                  Download My CV
-
-                </span>
-              </LazyUiButtonsPrimary> -->
+             
             </div>
 
           </section>

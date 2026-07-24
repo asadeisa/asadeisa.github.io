@@ -43,7 +43,7 @@ useHead({
     <NuxtPage />
     <NuxtRouteAnnouncer />
     <footer class="text-center -translate-y-10 text-xs md:text-sm lg:text-base">
-      <p class="term-prompt opacity-70" style="color: var(--term-prompt)">// built with Nuxt 4 · Vue 3 · Tailwind</p>
+     
       <p class="opacity-55 mt-1">© 2026 Asad Eisa. All rights reserved.</p>
     </footer>
   </div>

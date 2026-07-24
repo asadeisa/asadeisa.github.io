@@ -1,5 +1,5 @@
 /** How a project should be presented. Drives the "two AI registers" rule. */
-export type WorkKind = 'frontend' | 'ai-product' | 'experimental'
+export type WorkKind = 'frontend' | 'ai-product' | 'experimental' |  'under-development'
 
 export interface Work {
   id: number
