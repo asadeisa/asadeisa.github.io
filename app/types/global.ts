@@ -1,13 +1,13 @@
-/** How a project should be presented. Drives the "two AI registers" rule. */
-export type WorkKind = 'frontend' | 'ai-product' | 'experimental' |  'under-development'
+export type WorkKind = 'frontend' | 'mobile' | 'developer-tools' | 'experimental'
 
 export interface Work {
   id: number
   title: string
   description: string
   tools: string[]
-  /** Live site URL. Optional: some work has no public link. */
+  /** Public project site or related resource. */
   url?: string
+  urlLabel?: string
   image?: string
   /** One-line terminal-row summary. */
   summary?: string
@@ -31,6 +31,7 @@ export interface ExperienceRole {
   role: string
   org: string
   period: string
+  links?: { label: string; url: string }[]
   /** Short, factual highlights. No overclaiming. */
   highlights: string[]
 }

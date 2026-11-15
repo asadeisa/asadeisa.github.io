@@ -1,83 +1,84 @@
-// Projects — single owner. Source of truth: docs/source-of-truth.md §6.
-// Featured order is intentional: old → new (frontend → AI), telling the brand arc.
-//
-// IMPORTANT (verified 2026-06-27 via GitHub CLI):
-//  - Only public, recent repos may be linked (gitUrl). Never link old/private repos.
-//  - SpeakType = shipped AI product (kind 'ai-product').
-//  - AKRS = experimental workflow concept; MUST keep the experimental label, never
-//    present as finished. It is the same workflow spec in docs/work-flow-ai/.
-//
-// NOTE: `image` paths reuse existing slots (1..6.png) as PLACEHOLDERS. The old images
-// belonged to the dropped demo cards — replace with real screenshots during the build.
-
 import type { Work } from '~/types/global'
 
+export const shopProject: Work = {
+  id: 7,
+  title: 'Shop Management App',
+  description: 'An offline-first Android app for small shops to record sales, track inventory and customer balances, and see how the business is doing.',
+  tools: ['Flutter', 'Dart', 'SQLite / Drift', 'Nuxt', 'PostgreSQL'],
+  url: 'https://store-dash.netlify.app/',
+  urlLabel: 'Visit product site',
+  kind: 'mobile',
+}
+
+export const shopCheckout = {
+  description: 'Checkout saves the invoice and reduces stock in one local SQLite transaction using Drift. The changes commit together, so a failed sale cannot leave the stock count out of step with the invoice.',
+  screens: [
+    {
+      src: '/assets/images/shop-management-checkout.webp',
+      alt: 'New sale screen with items, quantities, and the amount due',
+      caption: 'Build a sale',
+    },
+    {
+      src: '/assets/images/shop-management-inventory.webp',
+      alt: 'Product list with stock quantities and a low-stock warning',
+      caption: 'Track stock',
+    },
+  ],
+} as const
+
 export const featuredProjects: Work[] = [
+  shopProject,
   {
-    id: 1,
-    title: 'Hadiawada',
-    description:
-      'Artist portfolio built Figma-to-code: accessibility-focused, fully responsive, with a YouTube media gallery.',
-    tools: ['Vue 3', 'Vite', 'Tailwind CSS'],
-    url: 'https://hadiawada.com',
-    summary: 'Accessibility-first artist portfolio, Figma to code, fully responsive.',
-    kind: 'frontend',
+    id: 5,
+    title: 'AKRS v2',
+    description: 'An open-source CLI that gives coding agents the project context they need for each task. It manages handoffs between planners, implementers, and testers and records verification results.',
+    tools: ['Node.js', 'CLI', 'MCP', 'Context engineering'],
+    url: 'https://www.npmjs.com/package/akrs-framework',
+    urlLabel: 'View on npm',
+    gitUrl: 'https://github.com/asadeisa/akrs',
+    kind: 'developer-tools',
+    label: 'Open-source developer tool',
   },
   {
     id: 2,
     title: 'Wefaq Magazine',
-    description:
-      'Research publishing platform: submission workflows, reviewer arbitration, content archive, admin, bilingual AR/EN.',
-    tools: ['React', 'Supabase' , 'Tailwind CSS'],
+    description: 'Arabic and English academic publishing workflows, from manuscript submission and peer review to editorial administration.',
+    tools: ['React', 'Supabase', 'Tailwind CSS'],
     url: 'https://wefaqmagazine.com',
-    summary: 'Research publishing platform: submission & review workflows, AR/EN.',
     kind: 'frontend',
   },
   {
     id: 3,
-    title: 'Balsa Files',
-    description:
-      'E-commerce flows: cart, wishlist, checkout, payment status, and responsive end-to-end user journeys.',
-    tools: ['Laravel ', 'Bootstrap'],
+    title: 'Basalama Oud',
+    description: 'Implemented responsive cart, wishlist, checkout, and payment status flows for an online oud store.',
+    tools: ['Laravel', 'Bootstrap'],
     url: 'https://balsa.tayasmart.com',
-    summary: 'E-commerce flows: cart, wishlist, checkout, payment status.',
+    kind: 'frontend',
+  },
+  {
+    id: 6,
+    title: 'Park & Fetch',
+    description: 'Migrated a parking platform to Nuxt, reviewed client bundles, and automated sitemap generation.',
+    tools: ['Nuxt 3'],
+    url: 'https://parkandfetch.com',
+    kind: 'frontend',
+    metric: '100 Lighthouse SEO in a project audit',
+  },
+  {
+    id: 1,
+    title: 'Hadiawada',
+    description: 'Built a responsive artist portfolio from Figma with a video gallery and accessible navigation.',
+    tools: ['Vue', 'Vite', 'Tailwind CSS'],
+    url: 'https://hadiawada.com',
     kind: 'frontend',
   },
   {
     id: 4,
     title: 'SpeakType',
-    description:
-      'Open-source AI product: a voice-to-text platform and browser extension that drops accurate, context-aware text into any editable field (Gmail, Slack, Notion, ChatGPT). Groq Whisper transcription + Gemini cleanup, privacy-first. Built using a multi-agent dev workflow coordinated through the wmux terminal.',
-    tools: ['WXT', 'Vue 3', 'TypeScript', 'Nuxt 4 + Nitro', 'Neon Postgres + Drizzle', 'Groq Whisper', 'Google Gemini', 'BetterAuth'],
+    description: 'An open-source browser extension designed to turn speech into editable text directly in web apps.',
+    tools: ['WXT', 'Vue', 'TypeScript', 'Nuxt / Nitro', 'PostgreSQL'],
     gitUrl: 'https://github.com/asadeisa/SpeakType',
-    summary: 'Open-source voice-to-text platform + browser extension.',
-    kind: 'ai-product',
-  },
-  {
-    id: 5,
-    title: 'AKRS',
-    description:
-      'Adaptive Knowledge Routing System — A context-engineering framework for AI agent workflows. It routes the exact required knowledge to agents at the correct moment (Leader plans / Worker executes), enabling even inexpensive models to execute complex tasks reliably using zero-dependency context files.',
-    tools: ['Context-engineering', 'AI Framework' ,'Prompt Architecture '],
-    gitUrl: 'https://github.com/asadeisa/akrs',
-    summary: 'Adaptive Knowledge Routing System',
-    kind: 'ai-product',
-    label: 'Open-source ·Active',
-  },
-]
-
-
-
-// Secondary "more work". Park & Fetch surfaces a strong, verifiable metric.
-export const secondaryProjects: Work[] = [
-  {
-    id: 6,
-    title: 'Park & Fetch',
-    description: 'Parking platform rebuilt in Nuxt 3 with a strong SEO posture and optimized bundle/code-splitting.',
-    tools: ['Nuxt 3'],
-    url: 'https://parkandfetch.com',
-    summary: 'Parking platform rebuilt in Nuxt 3 with a 100 SEO score.',
-    kind: 'frontend',
-    metric: '100 SEO score',
+    kind: 'experimental',
+    label: 'In development',
   },
 ]

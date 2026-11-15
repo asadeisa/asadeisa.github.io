@@ -1,45 +1,44 @@
-// Professional experience — single owner. Source of truth: docs/source-of-truth.md §5 (CV).
-// Factual only. CityArt was a performance-only contribution, NOT site authorship.
-// Delivaz appears here for its metric; it is not linked (backend closed).
-
 import type { ExperienceRole } from '~/types/global'
 
 export const experience: ExperienceRole[] = [
   {
     role: 'Full-Stack Developer',
-    org: 'CityArt (Remote)',
+    org: 'CityArt',
     period: 'Jan 2026 – Jul 2026',
     highlights: [
-      'Delivered production improvements across publishing (Wefaq Magazine) and e-commerce (Balsa Files) platforms using Vue 3, React, Laravel, and TypeScript.',
-      'Built and refined complex admin dashboards and implemented bilingual (Arabic/English) UIs with secure API integrations.',
-      'Leveraged AI tools (Claude Code, OpenAI Codex) daily for rapid frontend task planning, debugging, and structured agentic workflows.'
-    ],
-  },
-  {
-    role: 'Frontend Developer',
-    org: 'Albaz Globe (Iraq, Remote)',
-    period: 'Jul 2025 – Dec 2025',
-    highlights: [
-      'Complex admin dashboards and REST-driven views for AI-driven workflows.',
-      'Pinia state management; Figma → Vue 3 implementation.',
-    ],
-  },
-  {
-    role: 'Frontend Developer (Contract)',
-    org: 'Parking & Creative Platforms (Remote)',
-    period: 'Jan 2025 – Jun 2025',
-    highlights: [
-      'Rebuilt Park & Fetch in Nuxt 3 — achieved a 100 SEO score.',
-      'Bundle optimization and code-splitting; Hadiawada artist portfolio.',
+      'Delivered assigned agency projects across academic publishing and e-commerce, including editorial workflows, admin views, and responsive checkout.',
+      'Improved page speed on CityArt’s existing Laravel site.',
     ],
   },
   {
     role: 'Lead Frontend Developer',
-    org: 'Delivaz Multi-Vendor E-commerce (Remote)',
+    org: 'Albaz Globe',
+    period: 'Jul 2025 – Dec 2025',
+    highlights: [
+      'Worked on the web dashboard for Ako Sayara, an automotive marketplace serving Iraq. Set up routing, state management, API integration, and shared components in Vue and Nuxt.',
+      'Built REST-driven views and translated Figma designs into reusable components.',
+    ],
+    links: [
+      { label: 'Albaz Globe website', url: 'https://albazglobe.com/' },
+      { label: 'Ako Sayara on Google Play', url: 'https://play.google.com/store/apps/details?id=com.ako_sayara' },
+    ],
+  },
+  {
+    role: 'Frontend Developer (Contract)',
+    org: 'Parking & Creative Platforms',
+    period: 'Jan 2025 – Jun 2025',
+    highlights: [
+      'Migrated Park & Fetch to Nuxt 3 and reached a Lighthouse SEO score of 100 in a project audit.',
+      'Built the Hadiawada artist portfolio with Vue 3 and Vite.',
+    ],
+  },
+  {
+    role: 'Lead Frontend Developer',
+    org: 'Delivaz',
     period: 'Dec 2023 – Dec 2024',
     highlights: [
-      'Built from scratch in Nuxt 3 / Vue; improved Lighthouse from 70 to 95.',
-      'Accessibility and release quality. (Backend/API closed — not shown publicly.)',
+      'Led the Nuxt frontend for a multi-vendor e-commerce platform covering catalog, vendor, and checkout flows.',
+      'Raised the Lighthouse performance score from 70 to 95 in project testing through lazy loading and code splitting.',
     ],
   },
 ]

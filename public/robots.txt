@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow:
 
-Sitemap: https://asad-eisa.netlify.app/sitemap.xml
+Sitemap: https://asadeisa.github.io/sitemap.xml
